@@ -379,7 +379,10 @@ uis.controller('uiSelectCtrl',
       if ( ctrl.activeIndex === -1 && ctrl.taggingLabel !== false ) {
         ctrl.activeIndex = 0;
       }
-
+      $timeout(function () {
+        ctrl.focusSearchInput(initSearchValue);
+      });
+      /*
       var container = $element.querySelectorAll('.ui-select-choices-content');
       if (ctrl.$animate && ctrl.$animate.enabled(container[0])) {
         ctrl.$animate.on('enter', container[0], function (elem, phase) {
@@ -394,7 +397,7 @@ uis.controller('uiSelectCtrl',
         $timeout(function () {
           ctrl.focusSearchInput(initSearchValue);
         });
-      }
+      }*/
     }
   };
 
