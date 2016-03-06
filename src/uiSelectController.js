@@ -122,6 +122,10 @@ uis.controller('uiSelectCtrl',
       }
 
       var container = $element.querySelectorAll('.ui-select-choices-content');
+      $timeout(function () {
+        ctrl.focusSearchInput(initSearchValue);
+      });
+      /*
       if (ctrl.$animate && ctrl.$animate.enabled(container[0])) {
         ctrl.$animate.on('enter', container[0], function (elem, phase) {
           if (phase === 'close') {
@@ -136,6 +140,7 @@ uis.controller('uiSelectCtrl',
           ctrl.focusSearchInput(initSearchValue);
         });
       }
+      */
     }
   };
 
